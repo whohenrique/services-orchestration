@@ -1,3 +1,7 @@
 from django.db import models
 
-# Create your models here.
+class Order(models.Model):
+    product_id = models.IntegerField()
+    quantity = models.IntegerField()
+    
+    
