@@ -10,8 +10,8 @@ class InventoryViewSet(viewsets.ModelViewSet):
 
     @action(detail=False, methods=['get'], url_path='check')
     def check_inventory(self, request):
-        product_id = request.query_params.get('product_id')
-        quantity = int(request.query_params.get('quantity', 0))
+        product_id = request.data.get('product_id')
+        quantity = int(request.data.get('quantity', 0))
 
         try:
             inventory = Inventory.objects.get(product_id=product_id)
