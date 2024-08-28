@@ -41,5 +41,6 @@ class PurchaseProductView(views.APIView):
     #TODO 4. Processar o pagamento no Payment Service
         
 
-        
+        return Response({'status': 'Purchase Completed'})
+
         
